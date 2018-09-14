@@ -1,4 +1,4 @@
-Dependencies
+### Dependencies
 
   python 3.7
   
@@ -17,7 +17,7 @@ Dependencies
 
 
 
-Requirements
+### Requirements
 
   A:
   load images in directory with labels
@@ -35,12 +35,12 @@ Requirements
 
 
   csv:
-
+```
   filename, personA, personB, personC, ... , personN
   1.jpg   ,       1,       0,       0, ... ,       0       ### person a was recognized in image with name 1.jpg
   2.jpg   ,       1,       1,       0, ... ,       0       ### persons a and b were recognized in image with name 2.jpg
   3.jpg   ,       1,       0,       1, ... ,       0       ### persons a and c were recognized in image with name 3.jpg
-
+```
 
   further considerations:
 
