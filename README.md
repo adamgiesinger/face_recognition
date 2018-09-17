@@ -57,10 +57,14 @@ in presentation:
  
  
 ### cli scripts
-`recognize_single_image.py` script can be used to recognize people in sample image. 
+
+#### recognize_single_image.py
+
+This script recognize people on a given image, draws border around the faces and puts a name underneath it. If it cannot recognize it will write "Unknown".
+
 For example:
 `python .\recognize_single_image.py knownPeopleFolderPath\ outputFolderPath\ inputImagePath`
-This script recognize people on a given image and draws border around the faces and puts a name underneath it. If it cannot recognize it will put "Unknown".
- -knownPeopleFolderPath is a path to a folder with known people images. These should be images with a single person on it. The 	  name of the image file will be used as a name of the person.
- -outputFolderPath is a path to a folder where processed image will be saved.
- -inputImagePath is the path to the image in which we want to recog nize people.
+
+ - `knownPeopleFolderPath` is a path to a folder with known people images. These should be images with a single person on it. The name of the image file will be used as a name of the person.
+ - `outputFolderPath` is a path to a folder where processed image will be saved.
+ - `inputImagePath` is the path to the image in which we want to recognize people.
