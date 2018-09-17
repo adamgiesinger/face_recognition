@@ -60,7 +60,7 @@ in presentation:
 
 #### recognize_single_image.py
 
-This script recognize people on a given image, draws border around the faces and puts a name underneath it. If it cannot recognize it will write "Unknown".
+This script recognizes people on a given image, draws border around the faces and puts a name underneath it. If it cannot recognize it will write "Unknown".
 
 For example:
 `python .\recognize_single_image.py knownPeopleFolderPath\ outputFolderPath\ inputImagePath`
@@ -68,3 +68,12 @@ For example:
  - `knownPeopleFolderPath` is a path to a folder with known people images. These should be images with a single person on it. The name of the image file will be used as a name of the person.
  - `outputFolderPath` is a path to a folder where processed image will be saved.
  - `inputImagePath` is the path to the image in which we want to recognize people.
+
+#### live_face_recognition.py
+This script recognizes people on the live video stream. It uses folder with known people images and if it cannot recognize someone it will blur persons face
+
+For example:
+`python .\live_face_recognition.py knownPeopleFolderPath\ 1`
+
+ - `knownPeopleFolderPath` is a path to a folder with known people images. These should be images with a single person on it. The name of the image file will be used as a name of the person.
+ - `1` is an index of the camera device. 0 represents integrated web camera.
