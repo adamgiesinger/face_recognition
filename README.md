@@ -88,11 +88,24 @@ This script contains two helper methods for reading image files from a certain f
 
  - `image_files_in_folder(folder)` function has one parameter, path to a folder whch contains images. What this function does is that it returns an string array where each element represents folder name and the name of an image from that folder concatenated.
 
-#### batch_recognize.py
-This script recognizes people from images in a batch and then exports the results in to a csv file. It uses `Export.py` export function for that. It uses folder with known people images and recognize people on the images in the `inputImagesFolderPath` folder. In the end it exports the results into .csv file. Currently it does everything in a single thread.
+#### batch_recognize_single_threaded.py
+This script recognizes people from images in a batch and then exports the results in to a csv file. It uses `Export.py` export function for that. It uses folder with known people images and recognize people on the images in the `inputImagesFolderPath` folder. In the end it exports the results into .csv file. It does everything in a single thread.
 
 For example:
 `python .\batch_recognize.py knownPeopleFolderPath\ inputImagesFolderPath\`
 
  - `knownPeopleFolderPath` is a path to a folder with known people images. These should be images with a single person on it. The name of the image file will be used as a name of the person.
  - `inputImagesFolderPath` is a path to a folder with images in which we want to recognize people.
+
+#### batch_recognize_multi_threaded.py
+This script recognizes people from images in a batch and then exports the results in to a csv file. It uses `Export.py` export function for that. It uses folder with known people images and recognize people on the images in the `inputImagesFolderPath` folder. In the end it exports the results into .csv file. It uses as much cpu cores as user defines it, if it's not explicitly defined it will use all available cpu cores.
+
+For example:
+`python .\batch_recognize_multi_threaded.py knownPeopleFolderPath\ inputImagesFolderPath\`
+or
+`python .\batch_recognize_multi_threaded.py knownPeopleFolderPath\ inputImagesFolderPath\ 4`
+if we want it to use 4 cpu cores for processing
+
+ - `knownPeopleFolderPath` is a path to a folder with known people images. These should be images with a single person on it. The name of the image file will be used as a name of the person.
+ - `inputImagesFolderPath` is a path to a folder with images in which we want to recognize people.
+ - `4` is number of cpu cores which will be utilized during image recognition process
